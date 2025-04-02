@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Suhani</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #FDE2FF, #F5E6FE);
+            color: #333333;
+            font-family: 'Georgia', serif;
+            text-align: center;
+            padding: 20px;
+            overflow-y: scroll;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .sentence {
+            font-size: 24px;
+            cursor: pointer;
+            margin: 20px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+        .sentence:hover {
+            transform: scale(1.05);
+        }
+        .deep-thought, .final-layer {
+            display: none;
+            font-size: 18px;
+            color: #DAA520;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .message-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #FF69B4;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+            width: 120px;
+            text-align: center;
+            animation: blink 1.5s infinite alternate;
+            cursor: pointer;
+        }
+        .message-box::before {
+            content: "📩 ";
+        }
+        @keyframes blink {
+            from {opacity: 1;}
+            to {opacity: 0.5;}
+        }
+       @keyframes snowfall {
+        from {transform: translateY(0);}
+        to {transform: translateY(800px);}
+    }
+    .snowflake {
+        position: absolute;
+        top: -10px;
+        background: rgba(255, 182, 193, 0.8);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        animation: snowfall linear infinite;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Suhani! 🎨✨</h1>
+        <div class="sentence" onclick="toggleThought(0)">Dear Suhani, Miss Designer, happiest birthday to the artist who colors the world with her presence!
+            <div class="deep-thought">As per the Ashtavakra Gita, you are the artist of your own reality, and the world reflects the colors you choose to paint it with.</div>
+            <div class="final-layer">Your presence itself is like a painting—unique, evolving, and full of meaning.</div>
+        </div>
+        <div class="sentence" onclick="toggleThought(1)">Without ever asking, life gifted you a canvas—an unwritten story, freely given.
+            <div class="deep-thought">Just as the sun rises without needing permission and the wind brushes against your skin without demand, existence itself is a quiet blessing—you are here, and that is enough.</div>
+            <div class="final-layer">“You were born with wings, why prefer to crawl through life?” - Khalil Gibran</div>
+        </div>
+        <div class="sentence" onclick="toggleThought(2)">Colors may bleed, some sketches may smudge, but in the end, your life’s art will be breathtaking.
+            <div class="deep-thought">Your existence is not just a presence but an essence, adding depth to the cosmic symphony—like a note that completes the melody of the universe.</div>
+            <div class="final-layer">"ज्यों की त्यों धर दीन्हीं चदरिया" — Sant Kabir<br>
+"Life, like a cloth, is given pure. Though colors may fade and threads may wear, its true beauty lies in how you weave your journey."</div>
+        </div>
+        <div class="sentence" onclick="toggleThought(3)">Whether or not you reach your goals, you are already whole, already complete in yourself.
+            <div class="deep-thought">A star does not wait for the sky’s approval to shine, nor does it question its light. It simply burns, radiates, exists—just as you do, complete in yourself.</div>
+            <div class="final-layer">"जल में कुंभ, कुंभ में जल है, बाहर भीतर पानी।  फूटा कुंभ जल जलहि समाना, यह तथ कहे गियानी॥" - Sant Kabir<br>
+"Like a drop of water within the ocean, you have always belonged. Your completeness is not something to seek, but something to realize."</div>
+        </div>
+        <div class="sentence" onclick="toggleThought(4)">Like a river carving its path through stone, your journey will shape you in ways you never imagined.
+            <div class="deep-thought">A river never questions the rocks in its path—it simply flows, shaping them with time, yet never losing itself.</div>
+            <div class="final-layer">"धीरे-धीरे रे मना, धीरे सब कुछ होय। माली सींचे सौ घड़ा, ऋतु आए फल होय॥" - Sant Kabir<br>
+"Everything unfolds in its own time. Just as a gardener waters a tree patiently, knowing the fruit will ripen when it is meant to, trust that your journey is unfolding at its perfect pace."</div>
+        </div>
+        <div class="sentence" onclick="toggleThought(5)">My best wishes are always with you. A brave girl stepping into 18—may you lead your life with courage, discover your true purpose, and understand yourself deeply.
+            <div class="deep-thought">Courage is not the absence of fear but the willingness to move forward despite it.</div>
+            <div class="final-layer">"उद्धरेदात्मनाऽत्मानं नात्मानमवसादयेत्। आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः॥" - Bhagavad Gita 6.5<br>
+"Lift yourself by your own understanding, do not degrade yourself. For the self is both the friend and the enemy of the self."</div>
+        </div>
+        <div class="sentence" onclick="toggleThought(6)">श्री सखी जयति ✨
+            <div class="deep-thought">May the divine friendship within you always flourish, guiding you toward truth, beauty, and self-realization.</div>
+            <div class="final-layer">श्री सखी जयति म्हणजे शुभ सखीचा विजय असो.</div>
+        </div>
+    </div>
+    <div class="message-box" onclick="showMessage()">Click me!</div>
+    <script>
+        function toggleThought(index) {
+            let thoughts = document.getElementsByClassName("deep-thought");
+            let layers = document.getElementsByClassName("final-layer");
+            if (thoughts[index].style.display === "none" || thoughts[index].style.display === "") {
+                thoughts[index].style.display = "block";
+                setTimeout(() => { thoughts[index].style.opacity = "1"; }, 300);
+                setTimeout(() => { layers[index].style.display = "block"; layers[index].style.opacity = "1"; }, 3000);
+            } else {
+                thoughts[index].style.opacity = "0";
+                layers[index].style.opacity = "0";
+                setTimeout(() => { thoughts[index].style.display = "none"; layers[index].style.display = "none"; }, 1000);
+            }
+        }
+        function showMessage() {
+            let msgBox = document.querySelector(".message-box");
+            msgBox.innerText = "Click the phrases to reveal deeper meanings!";
+            setTimeout(() => { msgBox.style.opacity = "0"; }, 5000);
+        }
+    function createSnowflakes() {
+        for (let i = 0; i < 50; i++) {
+            let snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.style.left = Math.random() * window.innerWidth + "px";
+            snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s"; // Snowflake speed
+            snowflake.style.animationDelay = Math.random() * 3 + "s"; // Delay for randomness
+            document.body.appendChild(snowflake);
+        }
+    }
+    createSnowflakes();
+    </script>
+</body>
+</html>
+
