@@ -121,25 +121,6 @@
                 setTimeout(() => { thoughts[index].style.display = "none"; layers[index].style.display = "none"; }, 1000);
             }
         }
-      function showMessage() {
-    let msgBox = document.querySelector(".message-box");
-    if (msgBox.innerText === "Click the phrases to reveal deeper meanings!") {
-        msgBox.innerText = "📩";
-        msgBox.style.opacity = "1";
-        msgBox.style.width = "50px";
-        msgBox.style.height = "50px";
-        msgBox.style.fontSize = "14px";
-        msgBox.style.padding = "5px";
-    } else {
-        msgBox.innerText = "Click the phrases to reveal deeper meanings!";
-        msgBox.style.opacity = "1";
-        msgBox.style.width = "120px";
-        msgBox.style.height = "auto";
-        msgBox.style.fontSize = "16px";
-        msgBox.style.padding = "15px";
-        setTimeout(() => { msgBox.style.opacity = "0"; }, 5000);
-    }
-}
 
     function createSnowflakes() {
         for (let i = 0; i < 50; i++) {
