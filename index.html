@@ -34,31 +34,7 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-        .message-box {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #FF69B4;
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 16px;
-            width: 120px;
-            text-align: center;
-            animation: blink 1.5s infinite alternate;
-            cursor: pointer;
-        }
-        .message-box::before {
-            content: "📩 ";
-        }
-        @keyframes blink {
-            from {opacity: 1;}
-            to {opacity: 0.5;}
-        }
-       @keyframes snowfall {
-        from {transform: translateY(0);}
-        to {transform: translateY(800px);}
-    }
+        
     .snowflake {
         position: absolute;
         top: -10px;
